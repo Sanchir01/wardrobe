@@ -1,21 +1,21 @@
 import Button from '~/shared/ui/Button'
-
+import logo from '~/shared/public/img/logo.png'
 const Header = () => {
 	return (
-		<header className='h-20 py-5'>
+		<header className='h-20 shadow-lg shadow-bottom-1 sticky top-0 shadow-black/10 z-20  border-b border-white backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 			<div className='container'>
 				<div className='flex items-center justify-between'>
-					<div className='logo'>logo</div>
+					<img src={logo} className='w-20 h-20' />
 					<nav className=''>
 						<ul className='flex gap-5'>
 							<li>
 								<a href='#'>Товары</a>
 							</li>
 							<li>
-								<a href='#'>Отзывы</a>
+								<a href='#'>Цены</a>
 							</li>
 							<li>
-								<a href='#'>Цены</a>
+								<a href='#'>Отзывы</a>
 							</li>
 							<li>
 								<a href='#'>Информация</a>

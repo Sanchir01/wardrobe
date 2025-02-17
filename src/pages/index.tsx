@@ -1,17 +1,12 @@
-import { FC } from 'react'
+import HeroBlock from '~/widgets/hero'
+import ReviewsBlock from '~/widgets/reviews'
 
-const MainPage: FC = () => {
+const MainPage = () => {
 	return (
-		<div>
-			<ul className='flex gap-2'>
-				<li>sadsa</li>
-				<li>sadsa</li>
-				<li>sadsa</li>
-				<li>sadsa</li>
-				<li>sadsa</li>
-				<li>sadsa</li>
-			</ul>
-		</div>
+		<>
+			<HeroBlock />
+			<ReviewsBlock />
+		</>
 	)
 }
 

@@ -11,6 +11,5 @@ export default defineConfig({
 			'~': '/src'
 		}
 	},
-	publicDir: '/src/shared/public',
-	assetsInclude: '/src/shareed/assets'
+	
 })

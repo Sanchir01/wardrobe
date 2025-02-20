@@ -1,5 +1,4 @@
 import { Title } from '~/shared/ui/Title'
-
 const HeroBlock = () => {
 	return (
 		<section

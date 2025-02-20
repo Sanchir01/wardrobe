@@ -1,8 +1,8 @@
 import EmblaSlider from './DefaultSlider'
 import { Title } from './Title'
-import door1 from '~/shared/public/img/door.png'
-import door2 from '~/shared/public/img/door2.png'
-import door3 from '~/shared/public/img/door3.png'
+import door1 from '/img/door.png'
+import door2 from '/img/door2.png'
+import door3 from '/img/door3.png'
 const DoorsSlider = () => {
 	return (
 		<section id='doors' className='mt-[150px]'>

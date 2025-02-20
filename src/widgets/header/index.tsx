@@ -1,5 +1,5 @@
 import Button from '~/shared/ui/Button'
-import Logo from '~/shared/public/img/logo.svg?react'
+import Logo from '../../../public/img/logo.svg?react'
 export const HeaderNav = [
 	{
 		title: 'Гардеробы',

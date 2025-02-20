@@ -25,7 +25,7 @@ const AboutSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-[url('src/shared/public/img/aboutImg.png')] min-h-[360px] bg-no-repeat bg-cover mt-10" />
+			<div className="bg-[url('/img/aboutImg.png')] min-h-[360px] bg-no-repeat bg-cover mt-10" />
 		</section>
 	)
 }

@@ -1,10 +1,10 @@
 import EmblaSlider from '~/shared/ui/DefaultSlider'
 import ReviewCart from '~/shared/ui/ReviewCart'
 import { Title } from '~/shared/ui/Title'
-import UserPhoto1 from '~/shared/public/img/reviewuser(1).png'
-import UserPhoto2 from '~/shared/public/img/reviewuser(2).png'
-import UserPhoto3 from '~/shared/public/img/reviewuser(3).png'
-import UserPhoto4 from '~/shared/public/img/reviewuser(4).png'
+import UserPhoto1 from '/img/reviewuser(1).png'
+import UserPhoto2 from '/img/reviewuser(2).png'
+import UserPhoto3 from '/img/reviewuser(3).png'
+import UserPhoto4 from '/img/reviewuser(4).png'
 
 export const UserReviews = [
 	{

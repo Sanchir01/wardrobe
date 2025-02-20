@@ -3,7 +3,7 @@ const HeroBlock = () => {
 	return (
 		<section
 			className={
-				"bg-[url('src/shared/public/img/heroBg.png')] min-h-screen bg-no-repeat bg-cover text-white  uppercase pt-25"
+				"bg-[url('/img/heroBg.png')] min-h-screen bg-no-repeat bg-cover text-white  uppercase pt-25"
 			}
 		>
 			<div className='container'>

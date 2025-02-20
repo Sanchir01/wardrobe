@@ -1,4 +1,4 @@
-import useEmblaCarousel from 'embla-Carousel-react'
+import useEmblaCarousel from 'embla-carousel-react'
 import { IChildren } from '../types'
 import cn from 'clsx'
 export interface IEmblaSliderProps extends IChildren {

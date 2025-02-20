@@ -42,7 +42,20 @@
 	--color-custom-black: #101010;
 	--color-gray: #d2d2d2;
 }
+@layer utilities {
+	@keyframes ticker {
+		0% {
+			transform: translateZ(0);
+		}
+		to {
+			transform: translate3d(-100%, 0, 0);
+		}
+	}
 
+	.animate-ticker {
+		animation: ticker 10s linear infinite;
+	}
+}
 body {
 	font-family: 'Inter-Display';
 	font-weight: 500;

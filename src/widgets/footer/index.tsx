@@ -36,7 +36,7 @@ const footerColumnContent: IFooterColumn[] = [
 
 const Footer = () => {
 	return (
-		<footer className='bg-custom-black text-white'>
+		<footer className='bg-custom-black text-white mt-30'>
 			<div className='container'>
 				<div className='flex justify-between'>
 					<div className='flex gap-10'>

@@ -1,28 +1,28 @@
 @import 'tailwindcss';
 
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Inter-Display';
 	src: url('src/shared/assets/fonts/InterDisplay-Bold.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Inter-Display';
 	src: url('src/shared/assets/fonts/InterDisplay-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Inter-Display';
 	src: url('src/shared/assets/fonts/InterDisplay-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'Inter';
+	font-family: 'Inter-Display';
 	src: url('src/shared/assets/fonts/InterDisplay-ExtraBold.woff2')
 		format('woff2');
 	font-weight: 800;
@@ -37,15 +37,16 @@
 	font-display: swap;
 }
 @theme {
-	--color-white: #f9f9f9;
-	--color-black: #101010;
+	--font-gilroy: 'Gilroy', sans-serif;
+	--color-custom-white: #f9f9f9;
+	--color-custom-black: #101010;
 	--color-gray: #d2d2d2;
 }
 
 body {
-	font-family: 'Inter';
-	font-weight: 400;
-	@apply bg-white;
+	font-family: 'Inter-Display';
+	font-weight: 500;
+	@apply bg-custom-white;
 }
 .container {
 	max-width: 1500px;

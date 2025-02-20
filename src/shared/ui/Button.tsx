@@ -1,13 +1,20 @@
 import { ReactNode } from 'react'
-
+import cn from 'clsx'
 export type ButtonProps = {
 	onClick?: () => void
 	children?: ReactNode
+	classname?: string
 }
 
-const Button = ({ onClick, children }: ButtonProps) => {
+const Button = ({ onClick, children, classname }: ButtonProps) => {
 	return (
-		<button className='p-3 bg-blue-100 rounded-2xl' onClick={onClick}>
+		<button
+			className={cn(
+				'rounded-lg bg-[#fff] opacity-80 transition hover:opacity-95 focus:bg-custom-black focus:text-white',
+				classname
+			)}
+			onClick={onClick}
+		>
 			{children}
 		</button>
 	)

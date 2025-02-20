@@ -1,28 +1,40 @@
 import Button from '~/shared/ui/Button'
-import logo from '~/shared/public/img/logo.svg'
+import Logo from '~/shared/public/img/logo.svg?react'
+export const HeaderNav = [
+	{
+		title: 'Гардеробы',
+		href: '#wardrobe'
+	},
+	{
+		title: 'О проекте',
+		href: '#about'
+	},
+	{
+		title: 'Двери-купе',
+		href: '#door'
+	},
+	{
+		title: 'Отзывы',
+		href: '#reviews'
+	}
+]
+
 const Header = () => {
 	return (
-		<header className='h-20 shadow-lg shadow-bottom-1 sticky top-0 shadow-black/10 z-20  border-b border-white backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+		<header className='h-18 shadow-lg  py-3 shadow-bottom-1 fixed left-0 right-0 top-0 shadow-black/10 z-20  border-b border-white backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 			<div className='container'>
-				<div className='flex items-center justify-between'>
-					<img src={logo} className='w-20 h-20' />
-					<nav className=''>
-						<ul className='flex gap-5'>
-							<li>
-								<a href='#'>Товары</a>
-							</li>
-							<li>
-								<a href='#'>Цены</a>
-							</li>
-							<li>
-								<a href='#'>Отзывы</a>
-							</li>
-							<li>
-								<a href='#'>Информация</a>
-							</li>
+				<div className='flex items-center justify-between '>
+					<Logo width={140} height={40} />
+					<nav className='text-white uppercase'>
+						<ul className='flex gap-10'>
+							{HeaderNav.map((item, i) => (
+								<li key={i}>
+									<a href={item.href}>{item.title}</a>
+								</li>
+							))}
 						</ul>
 					</nav>
-					<Button>
+					<Button classname='p-2'>
 						<a href='https://vk.com/sistemy_hranenia_dveri_kupe'>
 							Написать мне
 						</a>

@@ -1,3 +1,5 @@
+import { Title } from '~/shared/ui/Title'
+
 export interface IFooterColumn {
 	links: IFooterColumnContent[]
 }
@@ -34,10 +36,10 @@ const footerColumnContent: IFooterColumn[] = [
 
 const Footer = () => {
 	return (
-		<footer className='bg-black text-white'>
+		<footer className='bg-custom-black text-white'>
 			<div className='container'>
-				<div className=''>
-					<div className='flex  gap-10'>
+				<div className='flex justify-between'>
+					<div className='flex gap-10'>
 						{footerColumnContent.map((item, i) => (
 							<ul key={i}>
 								{item.links.map((content, i) => (
@@ -48,6 +50,7 @@ const Footer = () => {
 							</ul>
 						))}
 					</div>
+					<Title text={'пространстов, стиль, порядок'} />
 				</div>
 			</div>
 		</footer>

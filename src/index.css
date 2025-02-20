@@ -56,6 +56,10 @@
 		animation: ticker 10s linear infinite;
 	}
 }
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Inter-Display';
 	font-weight: 500;

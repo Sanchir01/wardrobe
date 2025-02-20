@@ -53,7 +53,7 @@ export const UserReviews = [
 
 const ReviewsBlock = () => {
 	return (
-		<div id='review' className='mt-[150px]'>
+		<div id='reviews' className='mt-[150px]'>
 			<div className='container'>
 				<Title
 					text='наши клиенты'

@@ -1,3 +1,5 @@
+import AboutSection from '~/shared/ui/About'
+import DoorsSlider from '~/shared/ui/Doors'
 import Ticker from '~/shared/ui/ticer'
 import HeroBlock from '~/widgets/hero'
 import ReviewsBlock from '~/widgets/reviews'
@@ -7,6 +9,8 @@ const MainPage = () => {
 		<>
 			<HeroBlock />
 			<Ticker />
+			<AboutSection />
+			<DoorsSlider />
 			<ReviewsBlock />
 		</>
 	)

@@ -11,7 +11,7 @@ export const HeaderNav = [
 	},
 	{
 		title: 'Двери-купе',
-		href: '#door'
+		href: '#doors'
 	},
 	{
 		title: 'Отзывы',

@@ -2,7 +2,7 @@ import { Title } from '~/shared/ui/Title'
 
 const HeroBlock = () => {
 	return (
-		<div
+		<section
 			className={
 				"bg-[url('src/shared/public/img/heroBg.png')] min-h-screen bg-no-repeat bg-cover text-white  uppercase pt-25"
 			}
@@ -38,7 +38,7 @@ const HeroBlock = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

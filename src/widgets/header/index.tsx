@@ -1,5 +1,5 @@
 import Button from '~/shared/ui/Button'
-import logo from '~/shared/public/img/logo.png'
+import logo from '~/shared/public/img/logo.svg'
 const Header = () => {
 	return (
 		<header className='h-20 shadow-lg shadow-bottom-1 sticky top-0 shadow-black/10 z-20  border-b border-white backdrop-blur supports-[backdrop-filter]:bg-background/60'>

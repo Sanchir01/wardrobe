@@ -1,5 +1,6 @@
 import useEmblaCarousel from 'embla-Carousel-react'
 import { IChildren } from '../types'
+
 const EmblaSlider = ({ children }: IChildren) => {
 	const [emblaRef] = useEmblaCarousel()
 	return (

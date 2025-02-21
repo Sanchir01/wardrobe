@@ -16,7 +16,7 @@ const ReviewCart = ({ alt, image, text, title, rating }: IReviewCartProps) => {
 	return (
 		<div
 			className={cn(
-				'p-5 bg-white max-w-[350px] h-[264px] shrink-0 flex-none basis-[22%] rounded-lg transition-all duration-200',
+				'p-5 bg-white max-w-[350px] h-[264px] shrink-0 flex-none basis-[20%] rounded-lg transition-all duration-200',
 				expanded ? 'overflow-y-scroll' : ''
 			)}
 		>

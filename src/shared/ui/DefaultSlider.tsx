@@ -8,7 +8,7 @@ const EmblaSlider = ({ children, classname }: IEmblaSliderProps) => {
 	const [emblaRef] = useEmblaCarousel()
 	return (
 		<div ref={emblaRef} className={cn('overflow-hidden', classname)}>
-			<div className='flex items-center gap-20'>{children}</div>
+			<div className='flex items-center gap-10'>{children}</div>
 		</div>
 	)
 }

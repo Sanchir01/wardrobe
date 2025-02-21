@@ -1,8 +1,41 @@
 import EmblaSlider from './DefaultSlider'
+import Image from './Image'
 import { Title } from './Title'
 import door1 from '/img/door.png'
 import door2 from '/img/door2.png'
 import door3 from '/img/door3.png'
+export const DoorsContent = [
+	{
+		href: door1,
+		alt: 'door',
+		loading: 'lazy'
+	},
+	{
+		href: door2,
+		alt: 'door',
+		loading: 'lazy'
+	},
+	{
+		href: door3,
+		alt: 'door',
+		loading: 'lazy'
+	},
+	{
+		href: door1,
+		alt: 'door',
+		loading: 'lazy'
+	},
+	{
+		href: door2,
+		alt: 'door',
+		loading: 'lazy'
+	},
+	{
+		href: door3,
+		alt: 'door',
+		loading: 'lazy'
+	}
+]
 const DoorsSlider = () => {
 	return (
 		<section id='doors' className='mt-[150px]'>
@@ -14,48 +47,17 @@ const DoorsSlider = () => {
 				/>
 				<div className='mt-5'>
 					<EmblaSlider>
-						<div className='flex-none w-1/4 max-h-[350px] '>
-							<img
-								src={door1}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
-						<div className='flex-none w-1/4 max-h-[350px]'>
-							<img
-								src={door2}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
-						<div className='flex-none w-1/4 max-h-[350px]'>
-							<img
-								src={door3}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
-						<div className='flex-none w-1/4 max-h-[350px]'>
-							<img
-								src={door1}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
-						<div className='flex-none w-1/4 max-h-[350px]'>
-							<img
-								src={door2}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
-						<div className='flex-none w-1/4 max-h-[350px]'>
-							<img
-								src={door3}
-								alt='door1'
-								className='object-cover w-full h-full'
-							/>
-						</div>
+						{DoorsContent.map((item, i) => (
+							<div className='flex-none w-1/4 max-h-[350px] ' key={i}>
+								<Image
+									src={item.href}
+									alt={item.href}
+									classname='object-cover w-full h-full'
+									loading={item.loading}
+								/>
+							</div>
+						))}
+						<div className='flex-none w-1/4 max-h-[350px] '></div>
 					</EmblaSlider>
 				</div>
 				<div className='grid  place-content-center font-medium mt-5 leading-relaxed hyphens-auto'>

@@ -1,5 +1,6 @@
 import Button from '~/shared/ui/Button'
-import Logo from '../../../public/img/logo.svg?react'
+import Logo from '~/shared/ui/Logo'
+
 export const HeaderNav = [
 	{
 		title: 'Гардеробы',
@@ -24,7 +25,7 @@ const Header = () => {
 		<header className='h-18 shadow-lg  py-3 shadow-bottom-1 fixed left-0 right-0 top-0 shadow-black/10 z-20  border-b border-white backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 			<div className='container'>
 				<div className='flex items-center justify-between '>
-					<Logo width={140} height={40} />
+					<Logo />
 					<nav className='text-white uppercase'>
 						<ul className='flex gap-10'>
 							{HeaderNav.map((item, i) => (

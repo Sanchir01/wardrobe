@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Title } from './Title'
 import cn from 'clsx'
+import Image from './Image'
 export interface IReviewCartProps {
 	image: string
 	title: string
@@ -22,7 +23,12 @@ const ReviewCart = ({ alt, image, text, title, rating }: IReviewCartProps) => {
 			<div>
 				<div className='flex items-center gap-5'>
 					<div className='w-12 h-12 rounded-full'>
-						<img src={image} alt={alt} className='object-cover' />
+						<Image
+							src={image}
+							alt={alt}
+							classname='object-cover'
+							loading='lazy'
+						/>
 					</div>
 					<div>
 						<Title text={title} size='xs' />

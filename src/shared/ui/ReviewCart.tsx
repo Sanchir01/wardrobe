@@ -41,10 +41,10 @@ const ReviewCart = ({ alt, image, text, title, rating }: IReviewCartProps) => {
 				<div
 					className={cn(
 						'transition-all duration-500 overflow-hidden ',
-						expanded ? 'max-h-[200px] opacity-100' : 'max-h-[50px] opacity-70'
+						expanded ? 'max-h-[200px] opacity-100' : 'max-h-[50px] opacity-80'
 					)}
 				>
-					<p className='text-gray-700 transition-opacity duration-300'>
+					<p className='text-gray-700 transition-all duration-300'>
 						{expanded
 							? text
 							: text.slice(0, MAX_LENGTH) +

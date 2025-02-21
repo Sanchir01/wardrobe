@@ -54,14 +54,14 @@ export const UserReviews = [
 const ReviewsBlock = () => {
 	return (
 		<div id='reviews' className='mt-[150px]'>
-			<div className='container'>
+			<div className='container relative'>
 				<Title
 					text='наши клиенты'
 					size='lg'
-					className='uppercase grid place-content-center text-4xl font-gilroy font-semibold'
+					className='uppercase grid place-content-center text-4xl font-gilroy font-semibold '
 				/>
 				<div className='mt-5'>
-					<EmblaSlider>
+					<EmblaSlider arrows>
 						{UserReviews.map(({ alt, image, rating, text, title }, i) => (
 							<ReviewCart
 								key={i}

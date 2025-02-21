@@ -2,36 +2,35 @@
 
 @font-face {
 	font-family: 'Inter-Display';
-	src: url('src/shared/assets/fonts/InterDisplay-Bold.woff2') format('woff2');
+	src: url('/fonts/InterDisplay-Bold.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Inter-Display';
-	src: url('src/shared/assets/fonts/InterDisplay-Medium.woff2') format('woff2');
+	src: url('/fonts/InterDisplay-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Inter-Display';
-	src: url('src/shared/assets/fonts/InterDisplay-Regular.woff2') format('woff2');
+	src: url('/fonts/InterDisplay-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Inter-Display';
-	src: url('src/shared/assets/fonts/InterDisplay-ExtraBold.woff2')
-		format('woff2');
+	src: url('/fonts/InterDisplay-ExtraBold.woff2') format('woff2');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Gilroy';
-	src: url('src/shared/assets/fonts/Gilroy-ExtraBold.woff2') format('woff2');
+	src: url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;

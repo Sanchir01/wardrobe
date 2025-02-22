@@ -45,11 +45,11 @@ const Footer = () => {
 	return (
 		<footer className='bg-custom-black text-white mt-30 p-10 uppercase '>
 			<div className='container'>
-				<div className='flex justify-between gap-5'>
+				<div className='grid grid-cols-2 gap-5'>
 					<div className='flex flex-col justify-between'>
 						<div className='flex gap-10 font-normal'>
 							{footerColumnContent.map((item, i) => (
-								<ul key={i}>
+								<ul key={i} className='flex flex-col gap-2'>
 									{item.links.map((content, i) => (
 										<li key={i}>
 											<a href={content.href}>{content.title}</a>
@@ -58,13 +58,12 @@ const Footer = () => {
 								</ul>
 							))}
 						</div>
-						<p className='mt-25'>© 2024 Все права защищены</p>
+						<p className='mt-25 font-normal'>© 2025 Все права защищены</p>
 					</div>
-
 					<Title
-						text={'пространсто, стиль, порядок'}
+						text={'пространсто стиль порядок'}
 						size='xs'
-						className='font-gilroy text-[100px] opacity-10 leading-[110px]'
+						className='font-gilroy text-[100px] opacity-9 leading-[90px] font-bold'
 					/>
 				</div>
 			</div>

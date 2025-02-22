@@ -28,10 +28,18 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: 'Gilroy';
-	src: url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
-	font-weight: 800;
+	src: url('/fonts/Gilroy-Semibold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
+	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
@@ -40,7 +48,10 @@
 	--color-custom-white: #f9f9f9;
 	--color-custom-black: #101010;
 	--color-gray: #d2d2d2;
+
+	--text-clamp-hero: clamp(2.875rem, 1.571rem + 6.518vw, 7.438rem);
 }
+
 @layer utilities {
 	@keyframes ticker {
 		0% {
@@ -76,6 +87,14 @@ body {
 }
 main {
 	flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 1500px;
+		padding: 0 10px;
+		margin: 0 auto;
+	}
 }
 .embla__button {
 	-webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);

@@ -55,13 +55,15 @@ const ReviewsBlock = () => {
 	return (
 		<div id='reviews' className='mt-[150px]'>
 			<div className='container relative'>
-				<Title
-					text='наши клиенты'
-					size='lg'
-					className='uppercase grid place-content-center text-4xl font-gilroy font-semibold '
-				/>
+				<div className='grid grid-cols-2 gap-5'>
+					<Title
+						text='наши клиенты'
+						size='lg'
+						className='uppercase  text-4xl font-gilroy font-semibold col-start-2'
+					/>
+				</div>
 				<div className='mt-5'>
-					<EmblaSlider arrows>
+					<EmblaSlider arrows classNameContainer='gap-5'>
 						{UserReviews.map(({ alt, image, rating, text, title }, i) => (
 							<ReviewCart
 								key={i}

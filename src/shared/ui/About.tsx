@@ -3,13 +3,22 @@ const AboutSection = () => {
 	return (
 		<section id='about' className='mt-[150px]'>
 			<div className='container'>
-				<div className='grid '>
+				<div className='grid grid-cols-2 gap-5'>
 					<Title
 						text='Организуйте свой гардероб с умом!'
 						size='lg'
-						className='font-gilroy font-semibold uppercase  text-right'
+						className='font-gilroy font-semibold uppercase col-start-2'
 					/>
-					<div className='flex fap-[30px]  pr-20 mt-5 place-content-end'>
+				</div>
+				<div className='grid grid-cols-6 '>
+					<Title
+						text='Гардеробные системы и двери-купе помогут навести  порядок и создать стильное пространство'
+						size='lg'
+						className='  col-start-3 col-end-7 font-gilroy uppercase font-semibold max-w-[980px]'
+					/>
+				</div>
+				<div className='grid grid-cols-6   mt-5 font-normal'>
+					<div className='col-start-3 col-end-6 flex gap-[30px]'>
 						<p className='max-w-[383px] '>
 							Гардеробные системы и двери-купе — это идеальное решение для тех,
 							кто ценит порядок и стиль. Забудьте о беспорядке и бесконечных

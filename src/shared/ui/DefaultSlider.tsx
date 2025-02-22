@@ -6,11 +6,13 @@ import Image from './Image'
 export interface IEmblaSliderProps extends IChildren {
 	classname?: string
 	arrows?: boolean
+	classNameContainer?: string
 }
 const EmblaSlider = ({
 	children,
 	arrows = false,
-	classname
+	classname,
+	classNameContainer
 }: IEmblaSliderProps) => {
 	const [emblaRef, emblaApi] = useEmblaCarousel()
 	const [canNext, setCanNext] = useState(true)
@@ -42,14 +44,12 @@ const EmblaSlider = ({
 	}, [emblaApi, updateScrollState])
 	return (
 		<div ref={emblaRef} className={cn('overflow-hidden ', classname)}>
-			<div className='flex items-center gap-10'>{children}</div>
+			<div className={cn('flex items-center', classNameContainer)}>
+				{children}
+			</div>
 			{arrows ? (
-				<div className='flex gap-2 absolute  w-22 right-0 top-[-20px] z-20'>
-					<button
-						className='embla__prev'
-						disabled={!canPrev}
-						onClick={scrollPrev}
-					>
+				<div className='flex gap-2 absolute w-22 right-10 top-[-20px] z-20'>
+					<button disabled={!canPrev} onClick={scrollPrev}>
 						<Image
 							src={'/img/arrowl.svg'}
 							alt={'arrow left'}
@@ -59,11 +59,7 @@ const EmblaSlider = ({
 							})}
 						/>
 					</button>
-					<button
-						disabled={!canNext}
-						className='embla__next'
-						onClick={scrollNext}
-					>
+					<button disabled={!canNext} onClick={scrollNext}>
 						<Image
 							src={'/img/arrowr.svg'}
 							alt={'arrow right'}

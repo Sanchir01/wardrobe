@@ -40,13 +40,16 @@ const DoorsSlider = () => {
 	return (
 		<section id='doors' className='mt-[150px]'>
 			<div className='container'>
-				<Title
-					text='наши двери-купе'
-					size='lg'
-					className='uppercase text-4xl grid place-content-center font-semibold font-gilroy'
-				/>
+				<div className='grid grid-cols-2 gap-5'>
+					<div />
+					<Title
+						text='наши двери-купе'
+						size='lg'
+						className='uppercase text-4xl font-semibold font-gilroy'
+					/>
+				</div>
 				<div className='mt-5'>
-					<EmblaSlider>
+					<EmblaSlider classNameContainer='gap-5'>
 						{DoorsContent.map((item, i) => (
 							<div className='flex-none w-1/4 max-h-[350px] ' key={i}>
 								<Image
@@ -60,7 +63,7 @@ const DoorsSlider = () => {
 						<div className='flex-none w-1/4 max-h-[350px] '></div>
 					</EmblaSlider>
 				</div>
-				<div className='grid  place-content-center font-medium mt-5 leading-relaxed hyphens-auto'>
+				<div className='grid place-content-center font-normal mt-5 leading-relaxed hyphens-auto text-[18px]'>
 					<p className='text-right max-w-[750px]'>
 						Мы предлагаем современные и функциональные
 					</p>

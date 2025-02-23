@@ -39,7 +39,7 @@ const HeroBlock = () => {
 						<Title
 							size='xl'
 							text='гардеробные системы хранения и двери-купе'
-							className='pt-15 text-[clamp(2.625rem,1.192rem+6.114vw,7rem)] leading-[clamp(2.625rem,1.192rem+6.114vw,7rem)] uppercase grid place-content-center font-gilroy text-center max-[576px]:text-left'
+							className='pt-15 text-[clamp(3.25rem,0.214rem+8.095vw,7.5rem)] leading-[clamp(2.625rem,1.692rem+6.114vw,7rem)] uppercase grid place-content-center font-gilroy text-center max-[576px]:text-left'
 						/>
 					</div>
 					<a

@@ -38,7 +38,7 @@ const AboutSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-[url('/img/aboutImg.png')] min-h-[360px] bg-no-repeat bg-cover mt-10 max-[768px]:min-h-[300px]" />
+			<div className="bg-[url('/img/aboutImg.png')] min-h-[360px] bg-no-repeat bg-cover mt-10 max-[768px]:min-h-[300px] max-[576px]:pt[10px]" />
 			<div className='container  min-[576px]:hidden '>
 				<div className='grid grid-cols-1 place-items-center pt-[10px] text=[clamp(0.75rem,0.647rem+0.392vw,1rem)]'>
 					<p className='max-w-[383px] content-center'>

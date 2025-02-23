@@ -15,5 +15,14 @@ export const useSwitchHeader = create<IUseSwitchHeader>((set, get) => ({
 
 export const useBurger = create<IToggleBurger>((set, get) => ({
 	burger: false,
-	toggleBurger: () => set({ burger: !get().burger })
+	toggleBurger: () => {
+		const newState = !get().burger
+
+		if (newState) {
+			document.body.classList.add('overflow-hidden')
+		} else {
+			document.body.classList.remove('overflow-hidden')
+		}
+		set({ burger: newState })
+	}
 }))

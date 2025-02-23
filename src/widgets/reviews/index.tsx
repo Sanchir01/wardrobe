@@ -53,13 +53,16 @@ export const UserReviews = [
 
 const ReviewsBlock = () => {
 	return (
-		<div id='reviews' className='mt-[150px]  scroll-mt-[80px]'>
+		<div
+			id='reviews'
+			className='mt-[150px]  scroll-mt-[80px] pb-30 max-[998px]:mt-20 max-[998px]:pb-20 scroll-my-20'
+		>
 			<div className='container relative'>
-				<div className='grid grid-cols-2 gap-5'>
+				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>
 					<Title
-						text='наши клиенты'
+						text={'наши клиенты'}
 						size='lg'
-						className='uppercase  text-4xl font-gilroy font-semibold col-start-2'
+						className='uppercase font-gilroy font-semibold leading-9 max-w-[clamp(16.875rem,10.441rem+24.51vw,32.5rem)] col-start-2 max-[998px]:col-start-1 text-[clamp(1.125rem,0.765rem+1.373vw,2rem)] max-[998px]:text-center max-[768px]:leading-6'
 					/>
 				</div>
 				<div className='mt-5'>

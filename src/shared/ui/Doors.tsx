@@ -39,11 +39,11 @@ export const DoorsContent = [
 
 const DoorsSlider = () => {
 	return (
-		<section id='doors' className='mt-[150px]'>
+		<section id='doors' className='mt-[150px] scroll-my-20 max-[768px]:mt-20'>
 			<div className='container'>
 				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>
 					<Title
-						text='Организуйте свой гардероб с умом!'
+						text='наши двери-купе'
 						size='lg'
 						className='font-gilroy font-semibold uppercase col-start-2  max-[998px]:col-start-1 text-[clamp(1.125rem,0.765rem+1.373vw,2rem)] max-[998px]:text-center max-[768px]:leading-6'
 					/>

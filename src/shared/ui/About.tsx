@@ -3,7 +3,7 @@ const AboutSection = () => {
 	return (
 		<section
 			id='about'
-			className='mt-[150px] max-[768px]:mt-20 max-[576px]:mt-10'
+			className='mt-[150px] max-[768px]:mt-20 max-[576px]:mt-10 scroll-my-20'
 		>
 			<div className='container'>
 				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>

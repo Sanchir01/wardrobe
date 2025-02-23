@@ -1,4 +1,5 @@
 import MainPage from '~/pages'
+import Footer from '~/widgets/footer'
 import Header from '~/widgets/header'
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
 					<MainPage />
 				</div>
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	)
 }

@@ -27,7 +27,10 @@ export const WardrobeContent = [
 ]
 const WardrobeGrid = () => {
 	return (
-		<section id='wardrobe' className='mt-[150px] max-[998px]:mt-20'>
+		<section
+			id='wardrobe'
+			className='mt-[150px] max-[998px]:mt-20 scroll-my-20'
+		>
 			<div className='container'>
 				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>
 					<Title
@@ -100,9 +103,9 @@ const WardrobeGrid = () => {
 					</p>
 				</div>
 
-				<div className=' min-[998px]:hidden max-[998px]:grid  max-[998px]:grid-cols-3 place-items-center   max-[998px]:gap-x-5 max-[998px]:gap-y-10  max-[768px]:grid-cols-2 max-[576px]:grid-cols-1 max-[576px]:gap-y-[10px] gap-[10px] mt-4'>
+				<div className=' min-[998px]:hidden max-[998px]:grid  max-[998px]:grid-cols-3 place-items-center   max-[998px]:gap-x-5 max-[998px]:gap-y-5  max-[768px]:grid-cols-2 max-[576px]:grid-cols-1 max-[576px]:gap-y-[5px] gap-[10px] mt-4'>
 					{WardrobeContent.map((item, i) => (
-						<div className='max-[768px]:h-[300px] mt-4' key={i}>
+						<div className='max-[768px]:max-w-[350px] mt-4' key={i}>
 							<img
 								src={item.href}
 								className='h-full w-full object-cover'

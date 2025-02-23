@@ -1,27 +1,52 @@
 import { Title } from '~/shared/ui/Title'
-
+export const WardrobeContent = [
+	{
+		title: 'test',
+		href: '/img/wardrobe.png'
+	},
+	{
+		title: 'test',
+		href: '/img/wardrobe1.png'
+	},
+	{
+		title: 'test',
+		href: '/img/wardrobe2.png'
+	},
+	{
+		title: 'test',
+		href: '/img/wardrobe3.png'
+	},
+	{
+		title: 'test',
+		href: '/img/wardrobe4.png'
+	},
+	{
+		title: 'test',
+		href: '/img/wardrobe5.png'
+	}
+]
 const WardrobeGrid = () => {
 	return (
-		<section id='wardrobe' className='mt-[150px]'>
+		<section id='wardrobe' className='mt-[150px] max-[998px]:mt-20'>
 			<div className='container'>
-				<div className='grid grid-cols-2 gap-5'>
+				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>
 					<Title
 						text={'функциональные решения для вашего интерьера'}
 						size='lg'
-						className='uppercase font-gilroy font-medium leading-9 max-w-[520px] col-start-2'
+						className='uppercase font-gilroy font-semibold leading-9 max-w-[clamp(16.875rem,10.441rem+24.51vw,32.5rem)] col-start-2 max-[998px]:col-start-1 text-[clamp(1.125rem,0.765rem+1.373vw,2rem)] max-[998px]:text-center max-[768px]:leading-6'
 					/>
 				</div>
-				<div className='mt-5 text-[18px]'>
+				<div className='mt-5 text-[18px] max-[998px]:hidden'>
 					<div className='grid grid-cols-4 gap-5 font-normal '>
 						<div>
-							<img src='/img/wardrobe.png' className='w-[400px]' />
+							<img src='/img/wardrobe.png' alt='wardrobe' />
 							<h6 className='mt-[10px]'>SpaceSaver</h6>
 						</div>
 						<div>
-							<img src='/img/wardrobe1.png' className='' />
+							<img src='/img/wardrobe1.png' alt='wardrobe' />
 							<h6 className='mt-[10px]'>OrganizeIt</h6>
 						</div>
-						<p className='item'>
+						<p>
 							Организуйте пространство с умом и стилем! Наши гардеробные системы
 							и двери-купе помогут вам создать идеальный порядок в вашем доме.
 						</p>
@@ -30,24 +55,24 @@ const WardrobeGrid = () => {
 							<h6 className='mt-[10px]'>WardrobeWizard</h6>
 						</div>
 					</div>
-					<div className='grid grid-cols-2 mt-5 gap-5'>
+					<div className='grid grid-cols-2 mt-5 gap-5 '>
 						<div className='grid grid-cols-1'>
-							<div className='flex gap-5'>
+							<div className='grid grid-cols-2 gap-5'>
 								<div className=''>
 									<img
 										src='/img/wardrobe3.png'
 										alt='wardrobe'
-										className='max-w-[345px] object-cover'
+										className=' object-cover '
 									/>
 									<h6 className='mt-[10px]'>StyleBox</h6>
 								</div>
 								<div className='' />
 							</div>
 							<div className='grid grid-cols-2 gap-5 mt-5'>
-								<div className='mt-auto'>
+								<p className='mt-auto'>
 									Удобные, компактные и эстетичные решения для хранения вещей
 									сделают ваш интерьер функциональным и современным
-								</div>
+								</p>
 								<div className=''>
 									<img
 										src='/img/wardrobe4.png'
@@ -61,11 +86,31 @@ const WardrobeGrid = () => {
 						<div className='max-w-[760px]'>
 							<img
 								src='/img/wardrobe5.png'
+								alt='wardrobe'
 								className='h-full w-full object-cover'
 							/>
 							<h6 className='mt-[10px]'>StyleBox</h6>
 						</div>
 					</div>
+				</div>
+				<div className='grid grid-cols-1 place-items-center'>
+					<p className='mt-4 min-[998px]:hidden   max-[576px]:max-w-[350px] '>
+						Организуйте пространство с умом и стилем! Наши гардеробные системы и
+						двери-купе помогут вам создать идеальный порядок в вашем доме.
+					</p>
+				</div>
+
+				<div className=' min-[998px]:hidden max-[998px]:grid  max-[998px]:grid-cols-3 place-items-center   max-[998px]:gap-x-5 max-[998px]:gap-y-10  max-[768px]:grid-cols-2 max-[576px]:grid-cols-1 max-[576px]:gap-y-[10px] gap-[10px] mt-4'>
+					{WardrobeContent.map((item, i) => (
+						<div className='max-[768px]:h-[300px] mt-4' key={i}>
+							<img
+								src={item.href}
+								className='h-full w-full object-cover'
+								alt='wardrobe'
+							/>
+							<h6 className='mt-[10px]'>{item.title}</h6>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>

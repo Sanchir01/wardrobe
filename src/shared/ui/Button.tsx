@@ -10,7 +10,7 @@ const Button = ({ onClick, children, classname }: ButtonProps) => {
 	return (
 		<button
 			className={cn(
-				'rounded-[2px] bg-white/50  transition hover:opacity-95 active:bg-custom-black active:text-white',
+				'rounded-xs bg-white/50  transition hover:opacity-95 active:bg-custom-black active:text-white',
 				classname
 			)}
 			onClick={onClick}

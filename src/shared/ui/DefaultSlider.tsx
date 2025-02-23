@@ -48,7 +48,7 @@ const EmblaSlider = ({
 				{children}
 			</div>
 			{arrows ? (
-				<div className='flex gap-2 absolute w-22 right-10 top-[-20px] z-20'>
+				<div className='flex gap-2 absolute w-22 right-10 top-[-20px] z-20 max-[998px]:hidden'>
 					<button disabled={!canPrev} onClick={scrollPrev}>
 						<Image
 							src={'/img/arrowl.svg'}

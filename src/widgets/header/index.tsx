@@ -1,7 +1,9 @@
 import Button from '~/shared/ui/Button'
 import Logo from '~/shared/ui/Logo'
 import cn from 'clsx'
-import { useSwitchHeader } from '~/app/store/useSwitchHeader'
+import { useBurger, useSwitchHeader } from '~/app/store/useSwitchHeader'
+import { useShallow } from 'zustand/shallow'
+
 export const HeaderNav = [
 	{
 		title: 'Гардеробы',
@@ -23,18 +25,33 @@ export const HeaderNav = [
 
 const Header = () => {
 	const headerSwitch = useSwitchHeader(state => state.switchHeader)
+	const [burger, setBurger] = useBurger(
+		useShallow(state => [state.burger, state.toggleBurger])
+	)
+	console.log('burger', burger)
 	return (
 		<header
 			className={cn(
-				'h-18 shadow-lg  py-3 shadow-bottom-1 fixed left-0 right-0 top-0 shadow-black/10 z-20  border-b border-white/40  backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300 ease-in',
+				`h-[clamp(2rem,0.971rem+3.922vw,4.5rem)] shadow-lg py-3  shadow-bottom-1 fixed left-0 right-0 top-0 shadow-black/10 z-20  border-b border-white/40  backdrop-blur supports-[backdrop-filter]:bg-background/60
+				 transition-all duration-300 ease-in max-[998px]:py-2`,
 				headerSwitch ? 'bg-black' : ''
 			)}
 		>
 			<div className='container'>
 				<div className='flex items-center justify-between '>
-					<Logo />
-					<nav className='text-white uppercase'>
-						<ul className='flex gap-10'>
+					<Logo classname=' max-[768px]:z-1' />
+					<nav
+						className={cn(
+							`text-white uppercase text-4  transition-all duration-500 ease-in max-[768px]:fixed max-[768px]:top-0 max-[768px]:right-0
+							   max-[768px]:min-h-dvh max-[768px]:backdrop-blur  max-[768px]:supports-[backdrop-filter]:bg-background/60 max-[768px]:w-dvh
+							  `,
+							burger
+								? ' max-[768px]:left-0  max-[768px]:bg-black/90  max-[768px]:p-20'
+								: 'max-[768px]:left-[-2000px] '
+						)}
+						onClick={setBurger}
+					>
+						<ul className='flex gap-10 max-[768px]:flex-col'>
 							{HeaderNav.map((item, i) => (
 								<li key={i}>
 									<a href={item.href}>{item.title}</a>
@@ -42,7 +59,7 @@ const Header = () => {
 							))}
 						</ul>
 					</nav>
-					<Button classname='px-4 py-2 uppercase text-sm'>
+					<Button classname='px-4 py-2 uppercase text-sm max-[769px]:hidden'>
 						<a
 							href='https://vk.com/sistemy_hranenia_dveri_kupe'
 							onClick={e => e.stopPropagation}
@@ -50,6 +67,35 @@ const Header = () => {
 							Закать звонок
 						</a>
 					</Button>
+					<label
+						className={cn(
+							`min-[768px]:hidden h-[16px] w-6 block relative cursor-pointer transition-all duration-300 ease-in-out z-0`,
+							burger ? 'rotate-180' : ''
+						)}
+						onClick={setBurger}
+					>
+						<span
+							className={cn(
+								'absolute w-full h-[2px] bg-white transition-transform duration-300',
+								'top-0 left-0',
+								burger ? 'rotate-[-45deg] translate-y-[7px]' : ''
+							)}
+						/>
+						<span
+							className={cn(
+								'absolute w-full h-[2px] bg-white transition-opacity duration-300',
+								'top-[7px] left-0',
+								burger ? 'opacity-0' : 'opacity-100'
+							)}
+						/>
+						<span
+							className={cn(
+								'absolute w-full h-[2px] bg-white transition-transform duration-300',
+								'bottom-0 left-0',
+								burger ? 'rotate-[45deg] -translate-y-[7px]' : ''
+							)}
+						/>
+					</label>
 				</div>
 			</div>
 		</header>

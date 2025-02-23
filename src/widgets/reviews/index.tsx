@@ -53,7 +53,7 @@ export const UserReviews = [
 
 const ReviewsBlock = () => {
 	return (
-		<div id='reviews' className='mt-[150px]'>
+		<div id='reviews' className='mt-[150px]  scroll-mt-[80px]'>
 			<div className='container relative'>
 				<div className='grid grid-cols-2 gap-5'>
 					<Title

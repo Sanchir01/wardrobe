@@ -36,22 +36,25 @@ export const DoorsContent = [
 		loading: 'lazy'
 	}
 ]
+
 const DoorsSlider = () => {
 	return (
 		<section id='doors' className='mt-[150px]'>
 			<div className='container'>
-				<div className='grid grid-cols-2 gap-5'>
-					<div />
+				<div className='grid grid-cols-2 gap-5 max-[998px]:grid-cols-1 max-[998px]:place-items-center'>
 					<Title
-						text='наши двери-купе'
+						text='Организуйте свой гардероб с умом!'
 						size='lg'
-						className='uppercase text-4xl font-semibold font-gilroy'
+						className='font-gilroy font-semibold uppercase col-start-2  max-[998px]:col-start-1 text-[clamp(1.125rem,0.765rem+1.373vw,2rem)] max-[998px]:text-center max-[768px]:leading-6'
 					/>
 				</div>
 				<div className='mt-5'>
 					<EmblaSlider classNameContainer='gap-5'>
 						{DoorsContent.map((item, i) => (
-							<div className='flex-none w-1/4 max-h-[350px] ' key={i}>
+							<div
+								className='flex-none w-1/4 max-h-[350px] max-[768px]:w-1/3  max-[576px]:w-3/4 '
+								key={i}
+							>
 								<Image
 									src={item.href}
 									alt={item.href}
@@ -60,11 +63,10 @@ const DoorsSlider = () => {
 								/>
 							</div>
 						))}
-						<div className='flex-none w-1/4 max-h-[350px] '></div>
 					</EmblaSlider>
 				</div>
-				<div className='grid place-content-center font-normal mt-5 leading-relaxed hyphens-auto text-[18px]'>
-					<p className='text-right max-w-[750px]'>
+				<div className='grid place-content-center font-normal mt-5 leading-relaxed hyphens-auto text=[clamp(0.75rem,0.647rem+0.392vw,1rem)]'>
+					<p className='text-right max-w-[750px] max-[998px]:text-start'>
 						Мы предлагаем современные и функциональные
 					</p>
 					<p className=' max-w-[750px]'>

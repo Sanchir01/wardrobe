@@ -16,7 +16,7 @@ export function useIntersection(onIntersect: () => void) {
 				})
 			},
 			{
-				threshold: [0, 0.8, 1] // Отслеживаем 0%, 80% и 100%
+				threshold: [0.8, 0, 1]
 			}
 		)
 		if (el) {
